@@ -1,0 +1,148 @@
+@import "./consts.scss";
+#input_container {
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  height: vh(100);
+}
+.inputForm-up {
+  bottom: vh(35);
+}
+.inputForm-down {
+  bottom: 0;
+}
+#plusIcon {
+  box-sizing: border-box;
+  height: 2.5rem;
+  width: 2.5rem;
+  margin-left: 0.8rem;
+  margin-right: 1.2rem;
+
+  color: white;
+  background-color: $pinkColor;
+  border-radius: 1.25rem;
+  padding: 6px;
+
+  transition-duration: 0.5s;
+}
+
+#sendIcon {
+  height: 2rem;
+  margin-right: 0.8rem;
+  margin-left: 1.2rem;
+  color: $pinkColor;
+}
+
+$inputfooterHeight: 5rem;
+#inputForm-container {
+  display: flex;
+  width: vw(100);
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: $inputfooterHeight;
+  background-color: #e4e8eb;
+
+  animation-name: none;
+  animation-duration: 0.65s;
+
+  #inputForm {
+    display: flex;
+    width: vw(95);
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  //only in inputForm-container
+  // down here, these didn't seem to work when combined them into one block (with commas)
+
+  #gp_input_border {
+    padding: 0;
+    width: vw(60);
+    height: $inputfooterHeight / 1.5;
+    // max-height: $inputfooterHeight / 2 * 3;
+    border: double 1px transparent;
+    border-radius: $inputfooterHeight * 0.5;
+    background-image: linear-gradient(white, white), radial-gradient(circle at top left, $pinkColor, $orangeColor);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    outline: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    textarea {
+      line-height: 1;
+      font-size: 1rem;
+      border: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: fit-content;
+      // white-space: pre; //keeps long word (at the end of textarea) and adds a scroll(y) to the text area
+      word-break: break-word;
+      line-height: 1.4;
+    }
+    #gp_input {
+      resize: none;
+      padding: 0;
+      outline: none;
+      height: 90%;
+      line-height: 90%;
+      width: 90%;
+      border: none;
+      border-radius: 5px;
+      cursor: text;
+    }
+  }
+
+  ::placeholder {
+    text-align: center;
+  }
+  ::-webkit-input-placeholder {
+    text-align: center;
+  }
+  :-moz-placeholder {
+    /* Firefox 18- */
+    text-align: center;
+  }
+  ::-moz-placeholder {
+    /* Firefox 19+ */
+    text-align: center;
+  }
+  :-ms-input-placeholder {
+    text-align: center;
+  }
+  #gp_input:disabled {
+    color: black;
+    opacity: 1;
+    background-color: transparent;
+  }
+}
+
+@keyframes slidein2 {
+  from {
+    bottom: 0;
+  }
+
+  to {
+    // bottom: 35vh;
+    // bottom: vh(30x);
+  }
+}
+
+@keyframes slideout2 {
+  from {
+    bottom: vh(30);
+  }
+
+  to {
+    bottom: 0;
+  }
+}

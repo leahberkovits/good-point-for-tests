@@ -1,0 +1,63 @@
+@import "./consts.scss";
+
+#up-button {
+  $button-radius-home: 3; //need to use the vh() func and cannot multiply or divide its result
+  bottom: vw(5);
+  padding: vh(calc(#{$button-radius-home} / 3));
+  border-radius: vh($button-radius-home);
+  height: vh($button-radius-home * 2);
+  width: vh($button-radius-home * 2);
+  
+  animation: up-button-come-in 0.7s ease-in-out;
+}
+#chat-scroll-down {
+  $button-radius-chat: 2;
+  bottom: calc(5rem + 10px);
+  padding: vh(calc(#{$button-radius-chat} / 3));
+  border-radius: vh($button-radius-chat);
+  height: vh($button-radius-chat * 2);
+  width: vh($button-radius-chat * 2);
+  
+  animation: up-button-come-in-chat 0.7s ease-in-out;
+}
+.all-purpose-buttons {
+  position: fixed;
+  right: vw(5);
+
+  background-color: #e6e6e6;
+  color: #4f4f4f;
+  z-index: 2;
+  cursor: pointer;
+}
+
+
+@keyframes up-button-come-in {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0);
+    // transform: translateY(3px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes up-button-come-in-chat {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-3px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

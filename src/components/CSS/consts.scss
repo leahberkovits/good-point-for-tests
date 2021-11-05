@@ -1,0 +1,211 @@
+$pinkColor: #d4145a;
+$orangeColor: #ef8142; //changed to a little darker orages, the same as the gradient on summary page, so the export excel button will look the same
+
+$xs: 0.65rem;
+$small: 0.9rem;
+$medium: 1rem;
+$big: 1.2rem;
+$large: 1.3rem;
+$headers: 1.4rem;
+$largest: 1.6rem;
+
+$pinkOrangeGradient: linear-gradient(90deg, $orangeColor, $pinkColor);
+$oppositeGradient: linear-gradient(90deg, $pinkColor, $orangeColor);
+
+@mixin hrGradient {
+  border: 0 !important;
+  height: 1px !important;
+  background-image: $pinkOrangeGradient;
+}
+
+.flex-row-aligncenter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+@mixin flex-row-reverse-aligncenter {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.flex-row-between {
+  justify-content: space-between;
+  @extend .flex-row-aligncenter;
+}
+.flex-row-evenly {
+  justify-content: space-evenly;
+  @extend .flex-row-aligncenter;
+}
+.flex-row-reverse-between {
+  @include flex-row-reverse-aligncenter;
+  justify-content: space-between;
+}
+.flex-row-center {
+  @extend .flex-row-aligncenter ;
+  justify-content: center;
+}
+@mixin flex-column-aligncenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.flex-column-between {
+  justify-content: space-between;
+  @include flex-column-aligncenter;
+}
+.flex-column-center {
+  @include flex-column-aligncenter;
+  justify-content: center;
+}
+
+.alertMsg {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+
+  position: absolute;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.2rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: fit-content;
+  padding: 0 10px;
+  height: 2.5rem;
+  line-height: 2.5rem; //must be the same as the height
+  animation: alert-msg-animation;
+  animation-duration: 5s;
+  opacity: 0;
+}
+
+.disable-click {
+  pointer-events: none;
+  position: relative;
+}
+.disable-click * {
+  pointer-events: none;
+}
+.disable-click:before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: transparent;
+}
+
+@keyframes alert-msg-animation {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;300;400;600&display=swap');
+
+@mixin heeboFontFamily {
+  //must include in a ID so the default sans open hebrew will b overriden. !*! as !importans
+  font-family: "Heebo", sans-serif !important;
+}
+
+.scale-in-animation {
+  -webkit-animation: scale-in-ver-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: scale-in-ver-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.scale-out-animation {
+  -webkit-animation: scale-out-ver-top 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: scale-out-ver-top 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+/**
+ * ----------------------------------------
+ * animation scale-in-ver-top
+ * ----------------------------------------
+ */
+@-webkit-keyframes scale-in-ver-top {
+  0% {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+}
+@keyframes scale-in-ver-top {
+  0% {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+}
+
+/**
+ * ----------------------------------------
+ * animation scale-out-ver-top
+ * ----------------------------------------
+ */
+@-webkit-keyframes scale-out-ver-top {
+  0% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+}
+@keyframes scale-out-ver-top {
+  0% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+}
+@function vh($quantity) {
+  @return calc(var(--vh, 1vh) * #{$quantity});
+}
+@function vw($quantity) {
+  @return calc(var(--vw, 1vw) * #{$quantity});
+}

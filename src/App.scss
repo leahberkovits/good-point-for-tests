@@ -1,0 +1,68 @@
+@import "./components/CSS/consts.scss";
+@import url(//fonts.googleapis.com/earlyaccess/opensanshebrew.css);
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap"); // no hebrew in this one.
+
+* {
+  font-family: "Open Sans Hebrew", sans-serif !important; //problem with font family? here app !important
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-callout: none;
+  -webkit-touch-callout: none;
+  text-decoration-skip-ink: auto;
+  overflow-anchor: auto;
+}
+input,
+textarea {
+  -webkit-user-select: text;
+  -webkit-user-callout: default;
+  -webkit-touch-callout: default;
+}
+
+.App {
+  font-family: "Open Sans Hebrew", sans-serif;
+  text-align: center;
+  width: vw(100);
+  height: 100vh;
+  // overflow-x: hidden;
+  // overflow-wrap: break-word;
+  overflow: hidden;
+  max-width: vw(100);
+  position: fixed; //works without
+  overflow-y: auto;
+  background: white;
+  &::-webkit-scrollbar {
+    //! admin overrides this in admin.scss
+    display: none;
+  }
+}
+
+.dis-none {
+  display: none;
+}
+
+div hr {
+  margin: 0;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.teacherWebView {
+  margin: 0 35%;
+  // border: 1px solid #d4145a;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 20px -6px;
+  #navbar-container .MuiAppBar-root,
+  #sendGp-container,
+  #inputForm-container {
+    margin: 0 35% !important;
+  }
+
+  #popupContainer {
+    margin: 0 31.5% !important;
+  }
+  canvas {
+    height: 100%;
+    width: 100%;
+  }
+}

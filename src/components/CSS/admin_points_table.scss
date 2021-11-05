@@ -1,0 +1,48 @@
+@import "./admin_consts.scss";
+@import "./consts.scss";
+@import "./admin_table_generator_consts.scss";
+
+#admin-points-filter-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .order-container {
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    > div:first-child { // title: מיין לפי
+      margin-left: 1.5rem;
+      color: $admin-grey;
+      font-weight: bold;
+    }
+  }
+}
+
+#points-table-container {
+  .show-more-span {
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .sort-section-underline {
+    border-bottom: 1px solid $admin-medium-grey;
+  }
+  .points-option-selected {
+    color: $orangeColor !important;
+  }
+
+  table {
+    // column layout for admin points table
+    th {
+      // all columns
+      width: 18%;
+    }
+    th:last-child {
+      // last column (gpText)
+      width: 28%;
+    }
+  }
+}

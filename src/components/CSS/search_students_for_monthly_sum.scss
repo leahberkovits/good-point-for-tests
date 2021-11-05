@@ -1,0 +1,59 @@
+@import "consts.scss";
+#studentsSum-container {
+  @mixin font-size-input {
+    font-size: $big;
+  }
+
+  .searchForm {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    position: relative;
+    margin: vh(5) auto 4vh auto !important;
+    width: vw(90);
+    height: vh(9);
+    // top: 1vh;
+    border-radius: 30px;
+
+    padding: 2px;
+    background-image: linear-gradient(white, white), radial-gradient(circle at top left, $orangeColor, $pinkColor);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+
+    #cancelIcon {
+      height: 30%;
+    }
+    #searchBar-label {
+      margin: 0;
+      height: 50%;
+      #searchIcon {
+        height: 100%;
+      }
+    }
+    #searchBar_border {
+      height: 99%;
+      width: 65%;
+      border-radius: 30px;
+      border: none;
+      outline: none;
+      // border: 1px solid red;
+    }
+    $searchBar: 1.5rem;
+
+    #searchBar {
+      outline: none;
+      height: 100%;
+      min-height: 1.4rem;
+      width: 95%;
+      border: none;
+      // border: 1px solid black;
+      // border-radius: 30px;
+      text-align: right;
+      @include font-size-input;
+    }
+    #searchBar::-webkit-input-placeholder {
+      @include font-size-input;
+    }
+  }
+}

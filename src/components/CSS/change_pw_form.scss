@@ -1,0 +1,42 @@
+@import "./consts.scss";
+
+#resetPW-form-container {
+    // height: vh(92); //taking the top bar into account
+    width: 100vw;
+
+    margin-top: vh(10);
+
+    .resetPW-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        // margin: 0 auto;
+
+        #generalErr {
+            width: fit-content;
+        }
+    }
+
+    #change-pw-btn {
+        width: 20vw;
+        outline: none;
+        // position: absolute;
+        // top: vh(30);
+        background: $oppositeGradient;
+        color: white;
+        border: none;
+        width: 80%;
+    }
+
+    .textsContainer {
+        height: vh(80);
+        margin: auto;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

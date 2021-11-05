@@ -1,0 +1,24 @@
+#superadmin_reset_gps {
+  padding: 20px;
+
+  .MuiOutlinedInput-input {
+    padding: 0;
+    height: inherit;
+  }
+
+  .MuiOutlinedInput-root {
+    height: 6vh;
+
+    input[type="text"]:disabled {
+      background-color: lightgrey;
+      color: red !important;
+    }
+  }
+
+  .buttonsCont {
+    display: flex;
+    flex-direction: row;
+    width: -webkit-fill-available;
+    justify-content: space-evenly;
+  }
+}

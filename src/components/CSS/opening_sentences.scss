@@ -1,0 +1,346 @@
+@import "./consts.scss";
+
+#p {
+  position: absolute;
+  top: vh(16); //after navbar and top
+  height: 87vh; //till bottom of page
+  margin: 0;
+  width: vw(100);
+  display: block;
+  overflow-y: scroll;
+
+  .MuiPaper-elevation4 {
+    box-shadow: none;
+    overflow: hidden;
+  }
+  .MuiAppBar-colorDefault {
+    background-color: white;
+  }
+  .MuiTab-textColorPrimary.Mui-selected {
+    background-color: $pinkColor;
+    outline: none;
+  }
+  .MuiTabs-indicator {
+    height: 0;
+  }
+  .MuiTab-root {
+    color: white;
+    padding: 0;
+    background-color: #bbbbbb;
+    border-radius: 40px;
+    width: vw(16);
+    margin: vh(2) vw(1);
+    height: vh(5);
+    min-height: vh(3);
+    min-width: vw(22);
+    font-family: "Open Sans Hebrew", sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.1rem;
+    outline: none;
+  }
+  .MuiTypography-body1 {
+    font-family: "Open Sans Hebrew", sans-serif;
+  }
+  .MuiTabs-flexContainer {
+    margin: vh(1) vw(1);
+  }
+  #osFormInstructions {
+    position: relative;
+    #opening-sentences-list {
+      // overflow-y: scroll;
+      max-height: vh(58);
+      // border: black 1px solid;
+      & > div {
+        max-height: vh(58);
+        // overflow: auto;
+      }
+    }
+
+    #addOSBtn {
+      scroll-behavior: smooth;
+      width: 47%;
+      z-index: 1;
+      -webkit-perspective: 1000;
+
+      #add-button {
+        margin: 0;
+        padding: 0;
+        border: none;
+        background-color: #f2a413;
+        border-radius: 40px;
+        height: 2.2rem;
+        width: vw(40);
+      }
+      .add-button-not-clicked {
+        transform: translateZ(0);
+        transition: ease-in 90ms transform;
+      }
+      .add-button-clicked {
+        background-color: #ecaf3d !important;
+        transform: translateZ(-10vh);
+        transition: ease-in 90ms transform;
+      }
+    }
+  }
+  #add-button,
+  input:focus {
+    outline: none;
+  }
+  #os-form-container {
+    // position: fixed;
+    // bottom: 0;
+    width: vw(100);
+    padding: 0;
+    margin: 0;
+    border: 0;
+    animation-duration: 0.4s;
+    background-color: white;
+
+    #osFormError {
+      margin: 0;
+      margin-top: 0.5rem;
+      font-size: $small;
+    }
+
+    #os-form {
+      .form-btn {
+        margin: 0 vw(1);
+      }
+      #textBox {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        // border: 1px solid black; // for testing
+        width: 100%;
+      }
+
+      #submit-check {
+        // v on form
+        width: vw(7);
+      }
+      #button-submit {
+        //no such id in code
+        background-color: transparent;
+        border: none;
+        padding: 0;
+      }
+      #remove-typing-container {
+        #remove-typing {
+          width: vw(2.5);
+          color: $pinkColor;
+        }
+      }
+    }
+  }
+  #formHr {
+    margin: vh(1) 0;
+    color: black;
+    width: 95vw;
+    color: #f6f8fa;
+    margin-top: vh(1);
+  }
+  #opening-sentence {
+    margin: vh(1) 0;
+    #delete-msg {
+      width: vw(2.5);
+    }
+    #text-of-gp {
+      text-align: right;
+      max-width: vw(90);
+      word-wrap: break-word;
+    }
+  }
+
+  // gender selection
+  .pink {
+    color: $pinkColor;
+  }
+  .black {
+    color: #8e8e8d;
+  }
+  #gender-selection {
+    // width: vw(100);
+    .vl {
+      border-left: 1px solid #8e8e8d;
+      height: 10px;
+      margin: 0 10px;
+    }
+  }
+  // #instructions-container2 {
+  // top: vh(10);
+  // }
+  #instructions-container1 {
+    #instructions {
+      width: 50vw;
+      transform: rotate(180deg);
+    }
+    #text {
+      font-size: vw(4);
+      width: 100%;
+    }
+  }
+  .instructions-container {
+    text-align: center;
+    margin: 2rem 2vw;
+
+    // left: 0;
+    // top: vh(20);
+
+    z-index: 0;
+
+    #bubbleBody1 {
+      padding-top: 0;
+    }
+    #bubbleBody2 {
+      padding-bottom: 0;
+    }
+    $bubbleBodyWidth: vw(50);
+
+    .bubbleBody {
+      padding: vh(0.5) vw(5);
+      height: fit-content;
+      display: inline-block;
+      background-color: #f7bc2f;
+      width: $bubbleBodyWidth;
+      border-radius: 10%;
+      position: relative;
+
+      &::before { //this creates the triangle the makes the div look like a text-bubble.
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: -15px;
+
+        left: calc(50% - 15px);
+        content: "";
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+
+        border-bottom: 15px solid #f7bc2f;
+      }
+
+      .text {
+        height: fit-content;
+        font-size: $small;
+      }
+      #okayBtn-for-text2 {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .deleted-os {
+    -webkit-animation: slide-out-right 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+    animation: slide-out-right 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  }
+  .new-pm-animation {
+    -webkit-animation: slide-in-right-new-pm 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slide-in-right-new-pm 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
+  .back-in-os-form-button-animation {
+    -webkit-animation: back-in-os-form-button 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: back-in-os-form-button 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
+  .slide-right {
+    -webkit-animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+
+  /**
+ * ----------------------------------------
+ * animation slide-in-right
+ * ----------------------------------------
+ */
+  @-webkit-keyframes slide-in-right-new-pm {
+    0% {
+      -webkit-transform: translateX(1000px);
+      transform: translateX(1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-right-new-pm {
+    0% {
+      -webkit-transform: translateX(1000px);
+      transform: translateX(1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  // @-webkit-keyframes slide-right {
+  //   0% {
+  //     -webkit-transform: translateX(0);
+  //     transform: translateX(0);
+  //   }
+  .slide-in-bottom1 {
+    -webkit-animation: slide-in-bottom1 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slide-in-bottom1 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+  // .slide-from-left-osList {
+  //   position: absolute;
+  //   top: 20vh;
+  //   -webkit-animation: slide-from-left-osList 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  //   animation: slide-from-left-osList 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  // }
+  // .slide-from-right-osList{
+  //   position: absolute;
+  //   -webkit-animation: slide-from-right-osList 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  //   animation: slide-from-right-osList 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  // }
+
+  @-webkit-keyframes slide-out-right {
+    0% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+      opacity: 0;
+    }
+  }
+  @keyframes slide-out-right {
+    0% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+      opacity: 0;
+    }
+  }
+  @-webkit-keyframes slide-in-bottom1 {
+    0% {
+      -webkit-transform: translateY(100px);
+      transform: translateY(100px);
+    }
+    100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+  }
+  @keyframes slide-in-bottom1 {
+    0% {
+      -webkit-transform: translateY(50vw);
+      transform: translateY(50vw);
+    }
+    100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+  }
+}

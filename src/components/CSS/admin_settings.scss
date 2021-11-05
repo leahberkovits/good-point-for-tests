@@ -1,0 +1,122 @@
+@import "./admin_consts.scss";
+@import "./admin_table_generator_consts.scss";
+
+#admin-settings-container {
+  .admin-settings-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $admin-darker-grey;
+    width: 80vw;
+    margin: 2rem auto;
+    text-align: right;
+  }
+
+  #admin-settings-white-box {
+    height: 64vh;
+    padding-right: 3rem;
+    padding-left: 10px;
+    * {
+      user-select: text;
+      -webkit-user-select: text;
+      -webkit-user-callout: text;
+      -webkit-touch-callout: text;
+    }
+    .setting-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      margin-top: 10vh;
+      width: 100%;
+      .setting-title {
+        color: $admin-darker-grey;
+        padding-bottom: 1px;
+        min-width: 20%;
+        width: fit-content;
+        font-size: 3vh;
+        border-bottom: 1px solid $admin-orange;
+        font-weight: bold;
+      }
+      .setting-text {
+        width: 65%;
+        text-align: right;
+        color: $admin-orange;
+        font-weight: 300;
+        margin-top: 1rem;
+      }
+      .setting-button {
+        font-weight: 600;
+        height: fit-content;
+        font-size: 1rem;
+        padding: 4px 30px;
+
+        background-color: $admin-orange;
+        border-radius: 20px;
+        color: white;
+        margin-top: 1rem;
+
+        transition: background-color 200ms linear;
+
+        outline: 0;
+        border: none;
+        &:active {
+          opacity: 0.7;
+        }
+        &:hover {
+          opacity: 0.9;
+        }
+        &:focus {
+          outline: 0;
+        }
+      }
+      .setting-button-logout {
+        height: 6vh;
+        // line-height: 6vh;
+        font-size: 3vh;
+        width: 30%;
+        margin: 0 auto;
+        font-weight: 600;
+        padding: 4px 30px;
+        background-color: $admin-orange;
+        border-radius: 20px;
+        color: white;
+        margin-top: 1rem;
+        transition: background-color 200ms linear;
+        outline: 0;
+        border: none;
+        //#red - maybe the same css from here to all .setting-button s 
+        &:active {
+          opacity: 1;
+          // opacity: 0.7;
+          background-color: #c26239;
+        }
+        &:hover:not(:active) {
+          opacity: 0.95;
+        }
+        &:focus {
+          outline: 0;
+        }
+        //#
+        // background-color: $admin-light-grey;
+        // &:hover { // before itzuv
+        // transition: background-color 200ms ease-in-out;
+        // background-color: #cecdcd;
+        // }
+      }
+      label {
+        margin: 0;
+      }
+    } //each setting
+    .setting-container:first-child {
+      margin-top: 6vh;
+    }
+    .setting-container:last-child {
+      margin-bottom: 6vh;
+    }
+    // }
+  }
+
+  #upload-teachers {
+    display: none;
+  }
+}

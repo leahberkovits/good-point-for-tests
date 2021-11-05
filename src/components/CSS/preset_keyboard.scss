@@ -1,0 +1,68 @@
+@import "./consts.scss";
+
+#keyboard-container {
+  position: fixed;
+  height: vh(35);
+  bottom: 0;
+  margin: 0;
+  width: vw(100);
+
+  background-color: #e4e8eb;
+  animation-name: none;
+  animation-duration: 0.65s;
+
+  display: block;
+
+  z-index: 3; //so the scroll button won't be above the presetk
+
+  .nav-link {
+    color: white;
+    padding: 0;
+
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+  }
+
+  .nav-link.active {
+    background-color: $pinkColor;
+    border-radius: 40px;
+    // height: 1.9rem; does not layout well
+
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+  }
+
+  .nav-item {
+    background-color: #bbbbbb;
+    border-radius: 40px;
+    // height: 1.9rem; does not layout well
+    width: vw(16);
+    font-size: $medium;
+  }
+
+  #categories {
+    padding: 0 vw(3);
+  }
+}
+
+@keyframes slidein {
+  from {
+    bottom: vh(-35);
+  }
+
+  to {
+    bottom: 0;
+  }
+}
+
+@keyframes slideout {
+  from {
+    bottom: 0;
+  }
+
+  to {
+    bottom: vh(-35);
+  }
+}

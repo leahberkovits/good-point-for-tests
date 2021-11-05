@@ -1,0 +1,40 @@
+#dropdown-container {
+  #list {
+    position: fixed;
+    background-color: white;
+    border: 2px solid lightgrey;
+    top: 32vh;
+    border-radius: 7px;
+    width: vw(30);
+    min-width: 100px;
+    left: 35vw;
+    right: 35vw;
+    z-index: 2;
+    overflow: scroll;
+    max-height: 60vh;
+    height: fit-content;
+
+    .root {
+      width: 100%;
+      max-width: vw(40);
+      transition: all .5s ease;
+    }
+    .nested {
+      padding-right: 0.4rem;
+    }
+
+    .MuiListItemText-root {
+      margin: 2px;
+    }
+    .MuiListItem-root {
+      text-align: right;
+      height: 50px;
+    }
+    .dropdown-menu {
+      padding-top: 0.5rem;
+    }
+  }
+  .MuiList-padding {
+    // padding: 8px; //so the ripple effect animation, on click, will happen on the whole class tab, there shouldn't b padding
+  }
+}

@@ -1,0 +1,140 @@
+@import "./admin_consts.scss";
+@import "./consts.scss";
+
+.admin-new-instance-signup-container {
+    // the latter one is for update_class_mult_students.js
+    // used in many popups
+    // height: fit-content;
+    padding: 35px 45px; // changed from 35px
+    max-height: 80vh;
+    width: fit-content;
+    display: flex; // added
+    flex-direction: column; // added
+    align-items: flex-start !important; // overrides admin_popups // added
+    .new-instance-title {
+        align-self: center; // added
+        font-weight: bold;
+        color: $admin-medium-grey;
+        font-size: 1.25rem;
+        margin-bottom: 8%;
+    }
+    .new-class-title {
+        margin-bottom: 0;
+    }
+    #admin-new-teacher-names-container {
+        margin-bottom: 10px;
+    }
+    #teacherNameInfo {
+        // in admin new teacher signup, this needs margin-bottom instead of the form-container
+        margin-bottom: 2rem;
+    }
+    .admin-new-class-form-container {
+        display: flex;
+        flex-direction: row;
+        max-width: 60%;
+        min-width: 315px;
+        align-self: center;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+    }
+}
+// .admin-new-instance-input and .admin-new-instance-form-container are outside admin-new-instance-signup-container cos #mult489032-update-class-container is using them too (only these css are needed also for #mult489032-update-class-container)
+.admin-new-instance-input {
+    color: $admin-medium-grey;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    &:first-child > div:first-child,
+    .bold {
+        // input title
+        // changed. without the &:first-child, it put on every div inside .admin-new-instance-input (was a problem on admin_change_pw popup, on the input helperText)
+        font-weight: bold;
+    }
+    .admin-new-instance-dropdown {
+        background-color: #f0f1f6;
+        transition: background-color 0.4s;
+        &:not(.dd-open) {
+            &:hover {
+                background-color: #e5e6ea;
+            }
+            &:focus-visible {
+                //focus-visible seems to be greattt, active only on focus from "tab" and not from "click"
+                @include input-focus-style();
+            }
+        }
+    }
+    .admin-new-instance-dropdown-items {
+        background-color: #f0f1f6;
+        box-shadow: none;
+        max-height: 200px;
+    }
+    .admin-edit-student-dropdown-items {
+        background-color: #f0f1f6;
+        box-shadow: none;
+        max-height: 150px;
+    }
+}
+.admin-new-instance-form-container {
+    display: flex;
+    flex-direction: row;
+    width: fit-content; //changed
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    > div {
+        margin-left: 5rem;
+    }
+    > div:last-child {
+        margin-left: 0;
+    }
+}
+
+.admin-new-instance-errMessage {
+    text-align: center;
+    align-items: center;
+}
+.new-instance-buttons-container {
+    // might be used in serveral places
+    > div,
+    > button {
+        cursor: pointer;
+        margin-right: 2.5rem;
+        // padding: 10px 20px;
+        font-weight: bold;
+        // border: 1px solid royalblue;
+    }
+    .admin-cancel-form {
+        color: $admin-medium-grey;
+    }
+    .admin-save-form {
+        color: $admin-orange;
+    }
+    display: flex;
+    align-self: flex-end;
+    flex-direction: row;
+    align-items: center;
+    // width: 80%;
+    justify-content: space-evenly;
+}
+
+#admin-new-class-signup-container {
+    min-width: 50vw;
+    overflow: visible !important; // overrides admin_popups
+}
+
+#download-here {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#singleParent-container {
+    //in new student instance
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    label {
+        margin: 0;
+    }
+}

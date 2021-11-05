@@ -1,0 +1,90 @@
+@import "./consts.scss";
+@import "./admin_animations.scss";
+@import "./admin_consts.scss";
+@import "./admin_table_generator_consts.scss";
+
+.table-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: $admin-darker-grey;
+}
+
+.admin-filter-bar-container {
+  width: 80vw;
+  margin: 2rem auto;
+  position: relative;
+  // overflow-y: hidden;
+}
+
+.admin-table-container::-webkit-scrollbar {
+  display: none;
+}
+.admin-table-container {
+  // on each nav table (including settings)
+  box-shadow: 0px 3px 6px #00000029;
+  background-color: white;
+  width: 80vw;
+  margin: 3vh auto;
+
+  overflow-y: scroll;
+  height: fit-content;
+  // max-height: 70vh; // removed! (18.1.21) so there is only one scroll on admin page
+  transition: max-height 200ms linear;
+
+  .admin-table::-webkit-scrollbar {
+    display: none;
+  }
+  .admin-table {
+    width: 100%; // new
+    position: relative; // is important
+    * {
+      user-select: text !important;
+      -webkit-user-select: text !important;
+      -webkit-user-callout: text !important;
+      -webkit-touch-callout: text !important;
+    }
+    thead tr:nth-child(1) th {
+      //table headers row
+      z-index: 1; //for MUI CheckBoxes to b under headers, but can press the deselect button on the header
+      font-size: 1.2rem;
+      background-color: $admin-light-grey;
+      height: 8vh;
+      color: $admin-darker-grey;
+      font-weight: 300;
+      th:last-child {
+        //last two tr s
+        max-width: 30vw;
+      }
+    }
+    tbody tr {// all table row data (header and body) IN TBODY
+      transition: background 0.2s;
+    }
+    tr {
+      // EVERY table row data (header and body)
+      height: $admin-tr-height;
+    }
+    table,
+    td {
+      // every body cell
+      color: $admin-darker-grey;
+      font-weight: 300;
+    }
+  }
+  .no-table-data {
+    height: $admin-tr-height;
+    line-height: $admin-tr-height;
+  }
+
+  .admin-icon {
+    cursor: pointer;
+    height: $admin-tr-height;
+  }
+  .admin-icon:hover {
+    color: #e8e8e8f2;
+  }
+
+  .selcted-student {
+    background: #f6dccf 0% 0% no-repeat padding-box;
+    border: 1px solid #ff642080;
+  }
+}

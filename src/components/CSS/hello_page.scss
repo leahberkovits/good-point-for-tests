@@ -1,0 +1,102 @@
+@import "./consts.scss";
+@font-face {
+    font-family: "Assistant-Medium";
+    src: url("/files/Assistant-Medium.ttf");
+}
+
+#hello_first_page {
+    font-family: "Assistant-Medium" !important;
+    #image_cont {
+        padding: 5vw;
+        #welcomeLogo {
+            width: 25vw;
+        }
+    }
+    #video {
+        width: 100%;
+        min-height: 27vh;
+        @media only screen and (max-width: 650px) {
+            min-height: 15vh;
+        }
+        height: fit-content;
+    }
+    #content {
+        margin-top: 1vh;
+        #desc {
+            color: $pinkColor;
+            font-weight: bolder;
+            line-height: 2;
+            padding: 1vh;
+            font-size: 3.2rem;
+        }
+        #people_img {
+            height: 30vh;
+        }
+        #schoolsEntery {
+            margin: 3vh auto;
+            color: #8a8888;
+            font-weight: 500;
+            font-size: 3rem;
+        }
+        span {
+            display: flex;
+            width: 70%;
+            margin: auto;
+            justify-content: space-around;
+            .lang-btn {
+                background-image: $pinkOrangeGradient;
+                font-size: 2rem;
+                color: white;
+                padding: 10px;
+                border-radius: 35px;
+                min-width: 10vw;
+                border: none;
+                margin-bottom: 3vh;
+            }
+        }
+    }
+    #footer {
+        width: 100%;
+    }
+    #down_content {
+        margin: 10vh auto;
+
+        #title {
+            color: $pinkColor;
+            border-bottom: 1px solid $pinkColor;
+            width: 40vh;
+            // margin: auto;
+            padding-bottom: 0.5%;
+            margin: 3vh auto;
+        }
+        .d-flex {
+            width: fit-content;
+            margin: auto;
+            min-width: 20vw;
+            justify-content: space-between;
+            font-size: 2rem;
+        }
+        svg {
+            color: #f9a63a;
+            margin: 0.8vh 2vw;
+        }
+    }
+
+    @media screen and (max-width: 650px) {
+        #desc,
+        #schoolsEntery {
+            font-size: 2rem !important;
+        }
+        #content span .btn {
+            font-size: 1rem;
+            min-width: 25vw;
+        }
+        #down_content .d-flex {
+            font-size: 1rem;
+        }
+        #image_cont #welcomeLogo {
+            height: 20vw;
+            width: unset;
+        }
+    }
+}

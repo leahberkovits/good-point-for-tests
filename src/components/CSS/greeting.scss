@@ -1,0 +1,24 @@
+@import "./consts.scss";
+#greeting-container {
+  margin: vh(7) 0vw;
+
+  .colorful-background {
+    background: $pinkOrangeGradient;
+  }
+
+  .sentence {
+    font-size: $headers;
+  }
+  #sentence1 {
+    line-height: vh(6);
+    height: vh(6);
+  }
+  #sentence2 {
+    line-height: vh(5);
+    height: vh(5);
+    color: $pinkColor;
+  }
+  #gpCount {
+    font-size: 1.6rem;
+  }
+}

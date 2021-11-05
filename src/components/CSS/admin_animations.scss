@@ -1,0 +1,47 @@
+@keyframes dd-arow-animation {
+    0% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+        // transform: rotate(180deg);
+    }
+}
+
+@keyframes heigher { //not in use
+    0% {
+        height: 200px;
+    }
+    100% {
+        height: 40px;
+    }
+}
+
+@keyframes shorter { //not in use
+    0% {
+        height: 40px;
+    }
+    100% {
+        height: 200px;
+    }
+}
+
+@keyframes display-block-to-none {//not in use
+    from {
+        display: block;
+    }
+    to {
+        display: none;
+    }
+}
+@keyframes display-none-to-block {//not in use
+    from {
+        display: none;
+    }
+    to {
+        display: block;
+    }
+}

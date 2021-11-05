@@ -1,0 +1,125 @@
+@import "./admin_consts.scss";
+
+$more-filters-animations-duration: 0.4s;
+// #admin-classes-filter-container {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-between;
+//   align-items: center;
+// }
+#classes-table-container {
+  .new-grade-underline {
+    border-bottom: 1px solid $admin-light-grey;
+  }
+}
+
+.top-table-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 50vw;
+  align-items: flex-start;
+  // margin-right: 9vw; // added #admin-table-and-table-top instead
+  margin-top: 2rem;
+
+  .filter-container {
+    transition: all $more-filters-animations-duration ease-in-out;
+    > div {
+      margin-top: 1rem;
+    }
+  }
+  .more-filters-open {
+    height: 110px;
+    .more-filters-container {
+      visibility: visible;
+    }
+  }
+  .more-filters-close {
+    height: 47px;
+    .more-filters-container {
+      visibility: hidden;
+    }
+  }
+
+  .first-filters-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    // justify-content: center;
+    width: 100%;
+    .name-search {
+      background-color: white;
+      border-radius: 10px;
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 0 10px;
+      height: 35px;
+      width: 30vw;
+      max-width: 350px;
+      justify-content: space-between;
+      margin-left: 1rem;
+
+      input {
+        background-color: transparent;
+        border: none;
+        height: 60%;
+        width: 90%;
+        position: relative;
+        outline: 0;
+        &:focus {
+          outline: 0;
+        }
+        &::-webkit-input-placeholder {
+          /* Chrome/Opera/Safari */
+          color: $admin-darker-grey;
+          font-weight: 300;
+        }
+        &::-moz-placeholder {
+          /* Firefox 19+ */
+          color: $admin-darker-grey;
+          font-weight: 300;
+        }
+        &:-ms-input-placeholder {
+          /* IE 10+ */
+          color: $admin-darker-grey;
+          font-weight: 300;
+        }
+        &:-moz-placeholder {
+          /* Firefox 18- */
+          color: $admin-darker-grey;
+          font-weight: 300;
+        }
+      }
+      label {
+        // margin: 0; // seems to change the position of the img, when commented out it looks fine
+        height: 50%;
+        position: relative;
+        img {
+          height: 100%;
+          position: relative;
+        }
+      }
+    }
+    .more-filters-icon {
+      color: $admin-orange;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .more-filters-container {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    transition: all $more-filters-animations-duration;
+    > div {
+      margin-left: 2rem;
+    }
+  }
+}

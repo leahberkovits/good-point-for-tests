@@ -1,0 +1,25 @@
+@import "./consts.scss";
+#sign-up-second-container {
+  height: 100%;
+  p {
+    line-height: 5vh;
+    margin: 0;
+    padding: 0;
+  }
+
+  #multi-collapse-2 {
+    // position: absolute;
+    top: -24vh;
+    right: -18vw;
+  }
+  .on-form-opened {
+    // position: absolute;
+    top: 1vh;
+    right: 0vw;
+  }
+  .on-form-closed {
+    position: absolute;
+    top: 1vh;
+    right: 2vw;
+  }
+}

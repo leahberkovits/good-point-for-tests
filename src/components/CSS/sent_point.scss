@@ -1,0 +1,52 @@
+@import "./consts.scss";
+
+#submit-button-container {
+  height: 6vh;
+  width: vw(70);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  #submit {
+    height: 100%;
+    width: 100%;
+
+    border-radius: 35px;
+    text-align: center;
+    background: $oppositeGradient;
+    border: none;
+    color: white;
+    font-size: $large;
+    outline: none;
+    transition: ease 0.05s transform;
+  }
+  .submit-clicked {
+    animation: scale-button-on-click 150ms ease-out;
+  }
+  @keyframes scale-button-on-click {
+    0% {
+      transform: scale(1);
+    }
+    65% {
+      transform: scale(0.95);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}
+#imageSent {
+  width: vw(80);
+  padding: 5vh 0;
+}
+#textSent {
+  padding: 0vh vw(5) 0vh;
+  font-size: 2rem;
+}
+#untilNowSent {
+  font-size: $medium;
+}
+div #sent {
+  margin: auto;
+  -webkit-perspective: 1000;
+}

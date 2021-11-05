@@ -1,0 +1,159 @@
+@import "../components/CSS/admin_consts.scss";
+$closed-dropdown-height: 40px;
+$animation-duration: 0.3s;
+.order-dropdown {
+    background-color: white;
+    border-radius: 15px;
+    position: relative;
+    height: 100%; // added 21.1
+    min-width: 120px;
+    width: fit-content;
+    min-height: 40px;
+    cursor: pointer;
+    // when dd opens the border radius must change fast, NO TRANSITION on border-radius.
+    &:focus {
+        border: none;
+        outline: 0;
+    }
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 2px 13px;
+
+    .arrow-down-container {
+        width: 100%;
+        height: min-content; // changed from height to min-height 21.1
+        min-height: 40px; // changed from height to min-height 21.1
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .arrow-down {
+            margin-right: 10px;
+            width: 10px;
+            transform: rotate(0);
+        }
+        .arrow-down-animation {
+            animation: dd-arow-animation 0.2s ease;
+        }
+        .arrow-down-no-animation {
+            animation: none;
+        }
+        .placeholder {
+            color: $admin-darker-grey;
+            font-weight: 400;
+        }
+        .placeholder-input {
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid $admin-darker-grey;
+            outline: 0;
+        }
+    }
+    .dropdown-items {
+        // animation for dropdown-items, under dd-close and dd-open
+        visibility: hidden;
+        position: absolute;
+        top: 100%; // changed 21.1
+        width: 100%;
+        background-color: white;
+        border-radius: 0 0 15px 15px;
+        max-height: 300px;
+        overflow-y: auto;
+        padding-bottom: 0.5rem;
+
+        transition: all $animation-duration;
+        transform-origin: top center;
+
+        z-index: 2; // z-index 1 is for table headers (tr s in thead of admin table)
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        > div {
+            // each item
+            text-align: right;
+            color: $admin-darker-grey;
+            cursor: pointer;
+            margin-top: 0.5rem;
+            padding-right: 0.5rem;
+            // DO NOT add transition: all $animation-duration to here - dd items stay visible for like a sec after dd closed and then disappear (didnt check why, and didnt need the transision all anyway)
+            &:hover {
+                // added
+                opacity: 0.6;
+            }
+        }
+        .selected-item {
+            font-weight: bold;
+        }
+        .divide-above {
+            border-top: 1px solid #a3a4c120;
+        }
+        .divide-under {
+            border-bottom: 1px solid #a3a4c120;
+        }
+    }
+}
+.dd-close {
+    // on .order-dropdown
+    // height: 40px; // remove 21.1
+    // border-radius should return to 15px but "after" the close animation
+    animation: no-bottom-border-radius $animation-duration linear;
+    .dropdown-items {
+        visibility: hidden;
+        animation: close-dd $animation-duration ease-out;
+    }
+}
+.dd-open {
+    // on .order-dropdown
+    border-radius: 15px 15px 0 0;
+    // height: fit-content; // seems to work without
+
+    .dropdown-items {
+        visibility: visible;
+        animation: open-dd $animation-duration ease-in;
+        box-shadow: 0px 7px 6px #00000029;
+    }
+    .arrow-down-container {
+        .arrow-down {
+            transform: rotate(180deg);
+        }
+    }
+}
+.order-dropdown-error {
+    border: 1px solid $admin-error-border;
+}
+@keyframes no-bottom-border-radius {
+    0% {
+        border-radius: 15px 15px 0 0;
+    }
+    90% {
+        border-radius: 15px 15px 0 0;
+    }
+    100% {
+        border-radius: 15px;
+    }
+}
+
+@keyframes open-dd {
+    0% {
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes close-dd {
+    0% {
+        transform: scaleY(1);
+    }
+    100% {
+        transform: scaleY(0);
+    }
+}

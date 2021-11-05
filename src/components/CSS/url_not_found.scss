@@ -1,0 +1,39 @@
+@import "./consts.scss";
+
+
+
+#urlnotfound {
+    height: 100vh;
+    width: vw(100);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    #text-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        
+        #hellotext {
+            font-size: vw(7.5);
+        }
+        #maintext {
+            > div {
+                font-size: vw(6.5);
+            }
+        }
+    }
+    #gohomebtn {
+        height: 9vh;
+        line-height: 9vh;
+        width: vw(70);
+        background: $oppositeGradient;
+        border: none;
+        color: white;
+        font-size: vw(7.5);
+        outline: none;
+        border-radius: 30px;
+    }
+}

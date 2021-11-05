@@ -1,0 +1,21 @@
+@import "../consts.scss";
+
+#home-page-container {
+  height: vh(94);
+  position: absolute;
+  top: 6vh;
+  overflow-y: scroll;
+  left: 0;
+  right: 0;
+  // animation: scroll-back-up 1s linear;
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+@keyframes scroll-back-up {
+  0% {
+  }
+}

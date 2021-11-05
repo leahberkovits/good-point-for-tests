@@ -1,0 +1,145 @@
+@import "./consts.scss";
+
+#navbar-container {
+  position: absolute;
+  top: 0;
+  height: vh(7);
+  right: 0;
+  left: 0;
+  z-index: 10;
+  button:focus {
+    outline: none;
+    border: none;
+  }
+
+  .MuiAppBar-root {
+    padding: vh(1);
+    z-index: 10;
+    width: vw(100);
+  }
+  .MuiButtonBase-root:focus {
+    outline: none;
+    border: none;
+  }
+  .MuiButton-text {
+    padding: 0;
+  }
+  .navbar-icons {
+    height: vh(3);
+    outline: none;
+  }
+  #navbar-btn-hamburger {
+    @extend .navbar-icons;
+  }
+  #navbar-btn-heart {
+    @extend .navbar-icons;
+    height: vh(4);
+    margin-left: 10px;
+  }
+}
+.onPagePink {
+  color: $pinkColor;
+}
+.MuiDrawer-root,
+.MuiDrawer-modal {
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-callout: none;
+  -webkit-touch-callout: none;
+  position: absolute;
+  top: vh(6) !important;
+
+  .MuiPaper-root {
+    box-shadow: none;
+    position: absolute;
+  }
+  .MuiDrawer-paper {
+    top: vh(1);
+  }
+  .MuiBackdrop-root {
+    // top: vh(6);
+    position: absolute;
+    background-color: transparent;
+    width: vw(100);
+  }
+  .MuiListItem-root {
+    padding: 0;
+  }
+}
+
+#sidenav {
+  overflow-y: scroll;
+  width: vw(100);
+  padding: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  max-height: vh(100);
+
+  .MuiListItemText-root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+  }
+
+  .sidebar-link:active,
+  .nav-item-touch {
+    background-color: #f7f7f7b4;
+    color: $pinkColor;
+  }
+
+  .MuiTypography-body1 {
+    font-size: 1.2rem;
+    font-family: "Open Sans Hebrew", sans-serif;
+  }
+}
+#sidenav a {
+  text-decoration: none;
+  font-size: 4rem; //appears to be doing nothing
+  color: black;
+  display: block;
+  transition: 0.3s;
+  text-align: center;
+}
+
+a:active {
+  color: $pinkColor;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+@mixin header-hr {
+  position: absolute;
+  top: vh(5);
+  width: vw(100);
+  border-top: 1px solid transparent;
+  height: vh(8);
+  margin-top: 0;
+  border-bottom: 1px solid transparent;
+  box-shadow: 0px 0px 7px 0px #8c8c8c;
+  margin: vh(-7) auto 0 auto;
+}
+
+#header-hr {
+  @include header-hr;
+}
+
+#header-in-sidebar-hr {
+  @include header-hr;
+  top: -vh(2);
+}
+
+// @media (min-width: 700px) and (orientation: landscape) {
+//   #sidenav {
+//     width: 100%;
+//   }
+// }

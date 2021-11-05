@@ -1,0 +1,55 @@
+@import "./consts.scss";
+@import "./send_a_good_point_button.scss";
+$bottom: calc(17vh+ #{$circle_radius});
+
+#myActivity-container {
+  #GpByMonth {
+    height: fit-content;
+    top: 7vh;
+    z-index: -1;
+    // overflow: scroll;
+  }
+  #myActivity-txtAndDD {
+    background-color: #e6e6e6;
+    height: vh(5);
+    padding: 2vh vw(6.5);
+    position: sticky;
+    top: 0vh;
+    z-index: 10;
+    #dropdown-container {
+      margin: 0;
+      outline: none;
+
+      .dd-btn {
+        font-size: 0.9rem;
+        background-color: transparent;
+        border-color: transparent;
+        outline: none;
+        padding: 0;
+      }
+      .display-none{
+        display: none;
+      }
+      #month-dropdown-container {
+        position: absolute;
+        top: 5vh;
+        left: 0;
+        width: fit-content;
+        background-color: white;
+        z-index: 10;
+        border: 2px solid lightgrey;
+        border-radius: 7px;
+        height: fit-content;
+        max-height: 35vh;
+        overflow-y:scroll;
+      }
+      .MuiDivider-root {
+        border: none;
+        height: 1px;
+        margin: 0;
+        flex-shrink: 0;
+        background-color: rgba(0, 0, 0, 0.12);
+      }
+    }
+  }
+}

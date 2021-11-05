@@ -1,0 +1,92 @@
+@import "./consts.scss";
+.students-table {
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+#studentsList-container {
+  overflow-y: scroll;
+  height: 62vh;
+  scroll-behavior: smooth;
+
+  #student-container {
+    padding: 5px;
+    vertical-align: middle;
+    margin: 2vh 0;
+
+    #heartContainer-td {
+      width: vw(10);
+    }
+    #studentsClass {
+      font-size: $xs;
+      color: darkslategray;
+    }
+    #studentIcon-td {
+      width: vw(20);
+    }
+    #studentInfo-td {
+      width: vw(60);
+      color: black;
+      text-align: right;
+      text-indent: vw(5);
+      font-size: vw(5);
+    }
+    #countByStud-td {
+      width: vw(10);
+      color: black;
+      font-size: $medium;
+    }
+  }
+}
+.slide-in-bottom3 {
+  -webkit-animation: slide-in-bottom3 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-bottom3 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+@-webkit-keyframes slide-in-bottom3 {
+  0% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes slide-in-bottom3 {
+  0% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.slide-out-bottom3 {
+  -webkit-animation: slide-out-bottom 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: slide-out-bottom 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+@-webkit-keyframes slide-out-bottom3 {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+    opacity: 0;
+  }
+}
+@keyframes slide-out-bottom3 {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+    opacity: 0;
+  }
+}

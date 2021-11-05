@@ -1,0 +1,26 @@
+#error-popup {
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 15px -6px;
+
+  width: 50vw;
+  height: 30vh;
+  #buttons-container {
+    width: 80%;
+    height: fit-content;
+    bottom: 8vw;
+    padding: 4px 14px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  #error-msg {
+    height: 100%;
+    width: 100%;
+    padding: 0 15%;
+    line-height: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

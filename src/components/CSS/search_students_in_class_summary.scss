@@ -1,0 +1,70 @@
+@import "./consts.scss";
+
+#class-summary-dropdown-container {
+  z-index: 2;
+  position: absolute;
+  top: 16vh;
+  $ddHeight: 6vh;
+  height: $ddHeight;
+  left: 0;
+  right: 0;
+
+  #dropdownBtn {
+    margin: 0 auto;
+    border: none;
+    height: $ddHeight;
+    width: vw(70);
+    border: double 1px transparent;
+    border-radius: 80px;
+    background-image: linear-gradient(white, white), radial-gradient(circle at center right, $pinkColor, $orangeColor);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    outline: none;
+  }
+
+  #sort-btn {
+    margin-right: 2vw;
+    line-height: 6vh;
+    font-size: 1.5rem;
+    text-align: right;
+  }
+  #arrow {
+    margin-left: vw(3);
+    width: 0.8em;
+    height: 0.6em;
+  }
+
+  #class-summary-list {
+    .MuiTypography-body1{
+      font-family:"Open Sans Hebrew", sans-serif;
+    }
+    background-color: white;
+    border: 2px solid lightgrey;
+    border-radius: 15px;
+    width: 60%;
+    margin: 0 auto;
+    background-color: white;
+
+    .root {
+      width: 100%;
+      max-width: vw(40);
+    }
+    .nested {
+      padding-right: 0.4rem;
+    }
+
+    .MuiListItemText-root {
+      margin: 2px;
+    }
+    .MuiListItem-root {
+      text-align: right;
+      height: 50px;
+    }
+    .dropdown-menu {
+      padding-top: 0.5rem;
+    }
+  }
+  .MuiList-padding {
+    padding: 8px;
+  }
+}

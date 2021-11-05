@@ -1,0 +1,68 @@
+@import "./consts.scss";
+@import "./admin_consts.scss";
+
+#admin-page-container {
+  #filterbar-right {
+    // justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    #students-right-filter-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      div {
+        margin-right: 2vw;
+      }
+      div:first-child {
+        margin-right: 0;
+      }
+      .students-right-filter {
+        cursor: pointer;
+      }
+      .students-right-filter-on {
+        border-bottom: 1px solid $orangeColor;
+      }
+    }
+    // #edit-selected-buttons { // to delete?
+    //   margin-right: 5vw;
+    //   // min-width: 15vw;
+    //   button {
+    //     margin-right: 2vw;
+    //   }
+    //   button:first-child {
+    //     margin-right: 0;
+    //   }
+    //   display: flex;
+    //   flex-direction: row;
+    //   align-items: center;
+    //   justify-content: space-between;
+    //   // button{
+    //   // margin-right: 5vw;
+    //   // }
+    // }
+  }
+  #students-table {
+    height: fit-content;
+    // max-height: 60vh; // needs to be : max-height of .admin-table-container minus max-height of #students-filter-bar
+    overflow-y: auto;
+
+    // thead tr:nth-child(1) th { // appears in admin_table_generator.scss
+    //   z-index: 1;
+    // }
+    #deselect {
+      outline: 0;
+    }
+    th:first-child {
+      width: 5%;
+    }
+    th:not(:last-child, :first-child) {
+      width: 11.428571429%;
+    }
+    th:last-child {
+      width: 15%;
+    }
+  }
+}

@@ -1,0 +1,162 @@
+@import "./consts.scss";
+$orangeBoxColor: #fcefd7;
+#all-info-container {
+  #smsPageImg {
+    height: 25vh;
+    margin-top: 5vh;
+  }
+  #logoImage-landing {
+    margin: 5vh auto 10vh auto;
+  }
+
+  #box-container {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin: 0 auto;
+
+    .arrow-up {
+      $border-bottom-width: 3vw;
+      $border-top-width: $border-bottom-width;
+      $border-left-width: 0.8660254 * ($border-bottom-width + $border-top-width);
+      margin-bottom: 6vh;
+
+      width: 0;
+      height: 0;
+      border-left: $border-left-width solid $orangeBoxColor;
+      border-top: $border-top-width solid transparent;
+      border-bottom: $border-bottom-width solid transparent;
+    }
+    // (border-left-width 50px + border-right-width 50px) * 0.8660254 = 86.60254px  border-bottom-width = EquilateralTriangle height
+
+    #info-container {
+      // border: 1px solid black; //for working
+      text-align: right;
+      padding: 1.5vh vw(3);
+      border-radius: 10px;
+      min-height: 5rem;
+      height: min-content;
+      width: vw(80);
+      max-width: 620px;
+      background-color: $orangeBoxColor;
+      overflow: auto;
+
+      #teacherName {
+        color: $pinkColor;
+      }
+      #dateStamp {
+        float: left;
+        // font-size: $xs;
+        font-size: $small;
+      }
+    }
+
+    @media only screen and (min-width: 400px) and (max-width: 650px) {
+      .arrow-up {
+        $border-bottom-width: 2.5vw;
+        $border-top-width: $border-bottom-width;
+        $border-left-width: 0.8660254 * ($border-bottom-width + $border-top-width);
+
+        margin-bottom: 4vh;
+
+        width: 0;
+        height: 0;
+        border-left: $border-left-width solid $orangeBoxColor;
+        border-top: $border-top-width solid transparent;
+        border-bottom: $border-bottom-width solid transparent;
+      }
+      // (border-left-width 50px + border-right-width 50px) * 0.8660254 = 86.60254px  border-bottom-width = EquilateralTriangle height
+    }
+    @media only screen and (min-width: 650px) and (max-width: 1000px) {
+      .arrow-up {
+        $border-bottom-width: 2vw;
+        $border-top-width: $border-bottom-width;
+        $border-left-width: 0.8660254 * ($border-bottom-width + $border-top-width);
+
+        margin-bottom: 7vh;
+
+        width: 0;
+        height: 0;
+        border-left: $border-left-width solid $orangeBoxColor;
+        border-top: $border-top-width solid transparent;
+        border-bottom: $border-bottom-width solid transparent;
+      }
+      // (border-left-width 50px + border-right-width 50px) * 0.8660254 = 86.60254px  border-bottom-width = EquilateralTriangle height
+      #info-container {
+        min-height: 5rem;
+        // height: 15vh;
+        max-height: 22vh;
+        width: vw(80);
+      }
+    }
+    @media only screen and (min-width: 1000px) and (max-width: 1300px) {
+      .arrow-up {
+        $border-bottom-width: 1.5vw;
+        $border-top-width: $border-bottom-width;
+        $border-left-width: 0.8660254 * ($border-bottom-width + $border-top-width);
+
+        margin-bottom: 7vh;
+
+        width: 0;
+        height: 0;
+        border-left: $border-left-width solid $orangeBoxColor;
+        border-top: $border-top-width solid transparent;
+        border-bottom: $border-bottom-width solid transparent;
+      }
+      #info-container {
+        min-height: 5rem;
+        // height: 15vh;
+        max-height: 22vh;
+        width: vw(80);
+      }
+    }
+    @media only screen and (min-width: 1300px) {
+      .arrow-up {
+        $border-bottom-width: 1vw;
+        $border-top-width: $border-bottom-width;
+        $border-left-width: 0.8660254 * ($border-bottom-width + $border-top-width);
+
+        margin-bottom: 4vh;
+
+        width: 0;
+        height: 0;
+        border-left: $border-left-width solid $orangeBoxColor;
+        border-top: $border-top-width solid transparent;
+        border-bottom: $border-bottom-width solid transparent;
+      }
+      #info-container {
+        min-height: 5rem;
+        // height: 15vh;
+        max-height: 22vh;
+        width: vw(80);
+      }
+    }
+  }
+}
+#shareBtn {
+  margin: 5vh auto;
+  height: 5vh;
+  min-height: 35px;
+  line-height: 5vh;
+  width: 25vw;
+  max-width: 220px;
+  min-width: 128px;
+  font-size: $big;
+  //   font-weight: bold;
+  background: $oppositeGradient;
+  color: white;
+  border-radius: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  #shareText {
+    margin-right: 0.5vw;
+  }
+
+  #shareIcon {
+    height: 20px;
+    margin-left: 0.5vw;
+  }
+}

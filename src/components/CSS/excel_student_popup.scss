@@ -1,0 +1,170 @@
+@import "./consts.scss";
+
+#popupContainer {
+  width: vw(90);
+  min-height: vh(40);
+  height: fit-content;
+  position: fixed;
+  top: calc(50% - 20vh);
+  left: calc(50% - 45vw);
+  background: white;
+  border-radius: 30px;
+  z-index: 12;
+
+  #top-popup {
+    #close-popup {
+      width: vw(5);
+      position: absolute;
+      top: vw(4);
+      right: vw(4);
+    }
+    #title-popup {
+      height: vh(4);
+      margin: vh(1) auto 0 auto;
+      color: $pinkColor;
+      font-size: $large;
+    }
+  }
+  #nameAndClass-popup {
+    font-weight: bold;
+    font-size: $big;
+    margin-bottom: vh(5);
+  }
+  #hr-popup {
+    width: 95%;
+  }
+  #monthSelectionButton-popup {
+    width: vw(34);
+    height: vh(5);
+    line-height: vh(5);
+    margin: vh(4) auto;
+    font-size: $big;
+    background: $oppositeGradient;
+    color: white;
+    border-radius: 30px;
+  }
+
+  #mail-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    max-width: 100%;
+    width: fit-content;
+    margin: 0 10px;
+
+    #emailInput {
+      outline: none;
+      border: none;
+      border-bottom: 1px solid lightslategray;
+    }
+    .error-shake-animation {
+      -webkit-animation: shake-horizontal 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+      animation: shake-horizontal 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+    }
+  }
+}
+
+/*
+ * ----------------------------------------
+ * animation fade-out
+ * ----------------------------------------
+ */
+
+.fade-out {
+  -webkit-animation: fade-out 1s ease-out both;
+  animation: fade-out 1s ease-out both;
+  animation-delay: 0.5s;
+}
+
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/**
+* ----------------------------------------
+* animation scale-in-center
+* ----------------------------------------
+*/
+
+.scale-in-center {
+  -webkit-animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/**
+* ----------------------------------------
+* animation scale-out-center
+* ----------------------------------------
+*/
+
+.scale-out-center {
+  -webkit-animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+@-webkit-keyframes scale-out-center {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+}
+@keyframes scale-out-center {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+}

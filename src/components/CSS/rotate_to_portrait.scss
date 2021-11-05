@@ -1,0 +1,17 @@
+@function vh($quantity) {
+  @return calc(var(--vh, 1vh) * #{$quantity});
+}
+@function vw($quantity) {
+  @return calc(var(--vw, 1vw) * #{$quantity});
+}
+
+#rotateToPortait-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: vw(100);
+  #roteteGif {
+    height: 40vh;
+  }
+}

@@ -1,0 +1,169 @@
+@import "./consts.scss";
+@import "./admin_consts.scss";
+
+#admin-excel-uploader-container {
+  display: flex; //is imprtnt
+  flex-direction: row;
+  justify-content: flex-end; // space-evenly; changed
+  align-items: center;
+  width: fit-content;
+
+  min-width: 28vw;
+  margin-top: 2rem;
+
+  height: 50px;
+  position: absolute;
+  left: 0;
+  z-index: 3; // over .dropdown-items
+
+  label {
+    cursor: pointer;
+    margin: 0;
+  }
+
+  // #upload-ways-container {
+  //   display: flex;
+  //   flex-direction: row;
+  //   justify-content: space-evenly;
+  //   align-items: center;
+  //   width: fit-content;
+  .upload-ways {
+    margin-left: 1rem;
+    cursor: pointer;
+    border-radius: 7px;
+    height: fit-content;
+    white-space: nowrap;
+    padding: 4px 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: ease-out 0.4s background-color;
+  }
+  #file-upload-label,
+  #upload-way-form,
+  #upload-way-info {
+    outline: 0;
+    border: none;
+    background: none;
+    &:focus {
+      outline: 0;
+    }
+    &:hover {
+      opacity: 0.7;
+    }
+    &:active {
+      opacity: 0.6;
+    }
+  }
+  #file-upload-text {
+    outline: 0;
+    border: none;
+    background: none; 
+    color: unset; //changed to button, and then default styles from label were not applied
+    font-weight: unset; //changed to button, and then default styles from label were not applied
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  #upload-way-form {
+    background-color: $admin-orange;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    #upload-way-form-text {
+      margin-right: 10px;
+    }
+  }
+  #file-upload-label {
+    color: $admin-orange;
+    border: 1px solid $admin-orange;
+    background-color: transparent;
+  }
+  #upload-way-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $admin-orange;
+    border: 3px solid $admin-orange;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  #update-class-all-selected {
+    margin-right: 1rem;
+  }
+}
+
+#file-upload-info-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  #file-upload-options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    .upload-options-button {
+      cursor: pointer;
+      background-color: lightgrey;
+      border-radius: 25px;
+      padding: 0 15px;
+      height: 3.5vh;
+      font-size: 90%;
+    }
+    #upload-send-button,
+    #upload-cancel-button {
+      &:hover {
+        transition: ease-out 0.4s background-color;
+        transition: ease-out 0.4s color;
+        background-color: #b7b6b0;
+      }
+      &:active {
+        background-color: lightgrey;
+      }
+    }
+  }
+}
+
+#admin-add-instances-button {
+  cursor: pointer;
+  background-color: $orangeColor;
+  color: white;
+  box-shadow: #adb5bd 2px 2px 2px 0px;
+
+  border-radius: 50%;
+  width: 3vw;
+  height: 3vw;
+
+  line-height: 3vw;
+  font-size: 3vw;
+  label {
+    transition: all 0.3s;
+  }
+  .rotate-to-x {
+    transform: rotate3d(0, 0, 1, 45deg);
+  }
+}
+.admin-excel-uploader-input {
+  display: none;
+  // }
+}
+#admin-students-table-options-container {
+  // like #admin-excel-uploader-container, with little changes
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: fit-content;
+  min-width: 28vw;
+  margin-top: 2rem;
+  height: 50px;
+  position: absolute;
+  top: 70px; // so it's placed under #admin-excel-uploader-container
+  left: 0;
+  z-index: 3;
+}

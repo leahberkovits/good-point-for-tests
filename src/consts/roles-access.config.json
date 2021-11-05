@@ -1,0 +1,48 @@
+{
+    "ADMIN": {
+        "comps": [
+            "DashboardMain",
+            "Admin",
+            "SendAGoodPointPage",
+            "ChatPage",
+            "OpeningSentencePage",
+            "SentPage",
+            "MonthlySummaryPage",
+            "ClassMonthlySummaryPage",
+            "Navbar",
+            "smsLandingPage",
+            "UrlNotFound",
+            "GoToPhone",
+            "ChangePasswordPage",
+            "MoreOptionsPage",
+            "ExplanationPage"
+        ],
+        "defaultHomePage": "AdminHomePage"
+    },
+    "SUPERADMIN": {
+        "comps": [
+            "ChangePasswordPage",
+            "SuperAdmin"
+        ],
+        "defaultHomePage": "SuperAdmin"
+    },
+    "SIMPLEUSER": {
+        "comps": [
+            "SendAGoodPointPage",
+            "ChatPage",
+            "OpeningSentencePage",
+            "SentPage",
+            "MonthlySummaryPage",
+            "ClassMonthlySummaryPage",
+            "Navbar",
+            "smsLandingPage",
+            "UrlNotFound",
+            "GoToPhone",
+            "ProblemReportPage",
+            "ChangePasswordPage",
+            "MoreOptionsPage",
+            "ExplanationPage"
+        ],
+        "defaultHomePage": "HomePage"
+    }
+}

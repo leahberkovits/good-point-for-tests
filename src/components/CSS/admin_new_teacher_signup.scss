@@ -1,0 +1,15 @@
+@import "./consts.scss";
+@import "./admin_consts.scss";
+
+#admin-new-teacher-signup-container {
+  #teacherNameInfo {
+    font-size: 0.85rem;
+  }
+  .teacher-gender {
+    margin-left: 2.8rem;
+  }
+
+  .email-container .admin-text-input-input {
+    width: 240%;
+  }
+}

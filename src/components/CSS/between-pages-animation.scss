@@ -1,0 +1,25 @@
+.slide-enter {
+    position: fixed;
+    transform: translate(-vw(100),0);
+    opacity: 0;
+    z-index: 2;
+}
+.slide-enter.slide-enter-active {
+    transform: translate(0,0) ;
+    opacity: 1;
+    transition: transform 500ms ease-in-out, opacity 500ms ease-in-out;
+
+}
+.slide-exit {
+    position: absolute !important; // or fixed
+    height: 100vh;
+    overflow-y: scroll;
+    transform: translate(0,0);
+    z-index: 1;
+}
+  
+.slide-exit.slide-exit-active {
+    transform: translate(vw(100),0);
+    opacity: 0;
+    transition: transform 600ms ease-in-out, opacity 600ms ease-in-out;
+}

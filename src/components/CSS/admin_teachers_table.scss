@@ -1,0 +1,30 @@
+#teachers_edit_popup {
+    overflow: visible !important; // overrides admin_popups
+    #teachers_edit_popup-email-input {
+        width: 250px;
+    }
+}
+
+#teachers-table-container {
+    //?
+    table {
+        th:not(:last-child) {
+            //in the thought that the edit icon column will take the rest of the space
+            width: 25%;
+        }
+        th:last-child {
+            // icon th s (headers)
+            // display: flex;
+            align-self: flex-end;
+        }
+        tbody {
+            tr {
+                td:last-child {
+                    // icon td s (date)
+                    text-align: left;
+                    padding-left: 50px;
+                }
+            }
+        }
+    }
+}

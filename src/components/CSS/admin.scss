@@ -1,0 +1,116 @@
+@import "./consts.scss";
+@import "./admin_consts.scss";
+
+html .App {
+  // overrides the .App::-webkit-scrollbar in App.scss (FOR ADMIN)
+  overflow-y: auto;
+  width: 100%;
+  // position: absolute;
+  @include orageVerticalScrollbar();
+}
+
+#admin-page-container {
+  //no admin.scss so- this css is for admin.js
+  min-height: 100%;
+  height: fit-content;
+  // commented out after stash conflict merge of height/width // width: 100%; //the following comment is caused bcos of the nav bar // if there is a scrollbar on App, the whole page will fit, and there wont be a slight scroll on x (if 100% there was a scroll-x)
+  // commented out after stash conflict merge of height/width // height: 100vh; // changed from 100% for new itzuv scroll
+  width: 100vw; // if there is a scrollbar on App, the whole page will fit, and there wont be a slight scroll on x (if 100% there was a scroll-x)
+  position: relative;
+  overflow-y: auto;
+  background-color: $admin-light-grey;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  * {
+    @include heeboFontFamily;
+  }
+  #admin-table-and-table-top {
+    width: 80vw;
+    margin: auto;
+    position: relative;
+  }
+}
+
+.admin_popups {
+  overflow: auto;
+  position: fixed;
+  background: white;
+  // border-radius: 30px; //? new itzuv
+  z-index: 12;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include orageVerticalScrollbar();
+
+  *:not(#admin-page-container) {
+    @include heeboFontFamily;
+  }
+}
+
+.table {
+  overflow-y: scroll;
+  height: fit-content;
+  max-height: 75vh;
+}
+
+.saveAdminForm {
+  cursor: pointer;
+  color: $orangeColor !important;
+  outline: 0;
+  border: none;
+  background-color: transparent;
+  border-radius: 2px;
+  &:focus {
+    outline: 0;
+  }
+  &:focus-visible { //added -visible, not sure why there is a border on focus, doesnt look so good..
+    border: 1px solid #{$orangeColor + "90"}; //adds opacity to the color in the scss variable
+    outline: 0;
+  }
+  &:focus {
+    outline-color: #{$orangeColor + "90"}; // instead of outline: 0
+  }
+}
+.cancelAdminForm {
+  cursor: pointer;
+  outline: 0;
+  color: $admin-medium-grey !important;
+  border: none;
+  background-color: transparent;
+  border-radius: 2px;
+  &:focus {
+    outline: 0;
+  }
+  &:focus-visible {
+    border: 1px solid #{$admin-medium-grey + "90"}; //adds opacity to the color in the scss variable
+    outline: 0;
+  }
+  &:focus {
+    outline-color: #{$admin-medium-grey + "90"}; // instead of outline: 0
+  }
+}
+
+:root {
+  --scrollHeight: 0px;
+}
+.gender-or-class-select-container {
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  margin: 0 auto;
+}
+
+.hide-scrollbars {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

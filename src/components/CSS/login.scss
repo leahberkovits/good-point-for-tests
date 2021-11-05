@@ -1,0 +1,52 @@
+@import "./consts.scss";
+
+#form {
+  max-height: 400px;// 300px;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  .form-group {
+    height: vh(7);
+    min-height: 30px;
+    width: vw(65);
+    max-width: 400px;
+    outline: none;
+    border: double 1px transparent;
+    border-radius: 80px;
+    background-image: linear-gradient(white, white), radial-gradient(circle at center left, $pinkColor, $orangeColor); //changed radial gradient from bottom left to center left
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    margin: 0 auto vh(4) auto;
+
+    ::-webkit-input-placeholder {
+      text-align: right;
+    }
+    input:-moz-placeholder {
+      text-align: right;
+    }
+
+    .form_field {
+      // text-align: left;
+      height: 100%;
+      width: 90%;
+      // border-radius: 80px;
+      border: none;
+      background-color: transparent;
+      // padding: 0 1px;
+
+      outline: none;
+    }
+  }
+  #submit {
+    border-radius: 35px;
+    height: 100%;
+    width: vw(65);
+    max-width: 400px;
+    padding: 0 20px;
+    text-align: center;
+    background: $oppositeGradient;
+    border: none;
+    color: white;
+    font-size: $large;
+    outline: none;
+  }
+}

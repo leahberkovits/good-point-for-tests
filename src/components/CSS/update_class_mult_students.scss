@@ -1,0 +1,26 @@
+@import "./admin_consts.scss";
+
+#mult-update-class-container489032 {
+    overflow: visible !important; // overrides admin_popups
+
+    #text-487329 {
+        margin: 2rem 5rem;
+        font-size: 1.25rem;
+    }
+    #mult-update-class-label {
+        color: $admin-medium-grey;
+    }
+    #uc-buttons-container {
+        display: flex;
+        align-self: flex-end;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: 2rem; // margin-right does nothing
+        > button {
+            cursor: pointer;
+            margin-right: 2.5rem;
+            font-weight: bold;
+        }
+    }
+}

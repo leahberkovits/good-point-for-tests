@@ -1,0 +1,78 @@
+@import "../consts.scss";
+
+#about-container {
+    padding: 20px;
+    // position: absolute;
+    // top: 10%;
+    // right: 5%;
+    // width: 90%;
+
+    #about-hilma-logo {
+        height: 3.5rem;
+        align-self: flex-end;
+        margin-bottom: 2rem;
+    }
+
+    #about-back-btn {
+        // position: absolute;
+        // right: 1rem;
+        // top: 1rem;
+        display: flex;
+        img {
+            height: 1.7rem;
+        }
+        div {
+            margin-right: 0.5rem;
+            color: #cccccc;
+            // text-decoration: underline;
+        }
+    }
+
+    #header-container {
+        margin-bottom: 2rem;
+        h3 {
+            margin: 0;
+            font-weight: 400;
+            color: $pinkColor;
+            font-size: 1.5rem;
+
+            &.bold {
+                font-weight: 700;
+            }
+        }
+    }
+
+    .about-content {
+        // padding: 10%;
+        margin: 1rem;
+        margin-bottom: 1.2rem;
+
+        p {
+            padding: 0 20px;
+            margin: 0;
+            margin-top: 2rem;
+            white-space: pre-line;
+            color: #2a3c4a;
+            line-height: 1.2;
+        }
+    }
+
+    #hilma-button {
+        // position: absolute;
+        // bottom: 2rem;
+        // transform: translate(50%, 50%);
+        align-self: center;
+        outline: transparent;
+        border: none;
+        width: fit-content;
+        font-weight: 800;
+        font-size: 1.2rem;
+        background-color: #d4145ae6;
+        color: whitesmoke;
+        border-radius: 100vh;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+        padding: 2% 13%;
+        box-shadow: 0px 4px 6px #1b224682;
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "access_logger_enabled": false,
+    "block_count_login": 0,
+    "block_time_ms_login": 0,
+    "check_reset_password_enabled": false,
+    "check_reset_password_after_x_ms": false,
+    "reset_password_redirect_path": "",
+    "registration_verification_email_text": {
+        "subject": "",
+        "start": "",
+        "click": "",
+        "end": ""
+    },
+    "reset_password_email_text": {
+        "subject": "",
+        "start": "",
+        "click": "",
+        "login_ttl": 18000,
+        "end": "",
+        "error": ""
+    }
+}

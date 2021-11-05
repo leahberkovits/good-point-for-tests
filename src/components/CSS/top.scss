@@ -1,0 +1,64 @@
+@import "./consts.scss";
+.top-container-second {
+  //to controll height ( and by that the padding) on the top container, change this property AND the hrGradient class below
+  position: absolute;
+  top: vh(6.5);
+  height: vh(7.5);
+}
+.main-second {
+  bottom: 50%;
+  height: 80%;
+  width: 100%;
+  margin: auto auto;
+  padding: 0;
+}
+.hrGradient-second {
+  top: vh(7.5);
+}
+.top-container-default {
+  //to controll height ( and by that the padding) on the top container, change this property AND the hrGradient class below
+  position: unset;
+  height: vh(8);
+}
+.main-default {
+  height: vh(2);
+  padding: vh(0.2) 2vw vh(0.5) 2vw;
+}
+.hrGradient-default {
+  top: vh(8);
+}
+#top-container {
+  background-color: white;
+  width: vw(100);
+  // z-index: 2;
+  left: 0;
+  right: 0;
+  // border: 1px solid black; //adding the border makes the screen move on x axis
+
+  #main {
+    position: absolute;
+    top: vh(3);
+    left: 0;
+    right: 0;
+  }
+  a:has(#home-btn) {
+    outline: none;
+  }
+  a:has(#back-btn) {
+    outline: none;
+  }
+  #home-btn,
+  #back-btn {
+    cursor: pointer;
+    height: 1.5rem;
+  }
+  #title {
+    margin: 0;
+    font-size: $headers;
+  }
+}
+#top-hrGradient {
+  @include hrGradient;
+  width: vw(100);
+  position: absolute;
+}

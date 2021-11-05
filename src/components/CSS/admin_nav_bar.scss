@@ -1,0 +1,106 @@
+@import "./consts.scss";
+@import "./admin_consts.scss";
+
+$bar-height: 10vh;
+
+#top-bar {
+  width: 100%;
+
+  height: $bar-height;
+  background-color: white;
+  box-shadow: 0px -15px 20px 0px black;
+  
+  #top-bar-inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    // flex-wrap: wrap;
+    margin: 0 1rem;
+    overflow-x: auto;
+    @include greySimpleHorizontalScrollbar();
+
+    #admin-name {
+      color: $admin-grey;
+      font-weight: bold;
+      line-height: $bar-height;
+      height: $bar-height;
+      font-size: 1.4rem;
+      white-space: nowrap;
+    }
+
+    #nav-container {
+      display: flex;
+      flex-direction: row;
+      // align-items: center;
+      // justify-content: flex-end;
+
+      #gp-text {
+        line-height: $bar-height;
+        height: $bar-height;
+        color: $orangeColor;
+        font-weight: 600;
+        font-size: 2.2rem;
+        margin-left: 1.5rem;
+        white-space: nowrap;
+      }
+
+      // @media only screen and (max-width: 1130px) {
+      //   #gp-text {
+      //     font-size: 2.2rem;
+      //   }
+      // }
+
+      // #admin-nav-items-container {
+      // display: flex;
+      // flex-direction: row;
+      // align-items: center;
+      // justify-content: space-evenly;
+      // min-width: 360px;
+
+      .nav-item:hover {
+        cursor: pointer;
+        .nav-item-icon,
+        .nav-item-name {
+          color: #f1b897;
+        }
+      }
+      .nav-item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        font-size: 1.1rem; // name and icon too
+
+        // width: 15vw;
+        margin-left: 2.8rem;
+
+        .nav-item-icon {
+          margin-left: 0.5rem;
+          color: $admin-grey;
+        }
+        .nav-item-name {
+          font-weight: light;
+          color: $admin-grey;
+        }
+      }
+
+      .nav-item-selected {
+        .nav-item-icon {
+          color: $orangeColor;
+        }
+        .nav-item-name {
+          color: $orangeColor;
+        }
+        &:hover {
+          cursor: pointer;
+          .nav-item-icon,
+          .nav-item-name {
+            color: $orangeColor;
+          }
+        }
+      }
+      // }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@import "./consts.scss";
+
+#class-summary-scrollable-student-container {
+  position: absolute;
+  top: 25vh;
+  overflow-y: scroll;
+  height: 75vh;
+}
+#student-icon{
+  width: 20vw;
+}
+#studentName{
+  width: vw(60);
+  color: black;
+  text-align: right;
+  text-indent: vw(5);
+  font-size: vw(5);
+}
+#countByStud{
+  width: vw(10);
+  color: black;
+  font-size: $medium;
+}
+#heartContainer{
+ width: vw(10);
+}
+#studentsSumTable{
+  margin: 3vh 0vw;
+}

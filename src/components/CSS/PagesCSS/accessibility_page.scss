@@ -1,0 +1,54 @@
+@import "../consts.scss";
+
+#accessibility-container {
+  flex: 1;
+  overflow: scroll;
+  white-space: pre-line;
+
+  #accessibility-hilma-logo {
+    height: 3.5rem;
+    align-self: flex-end;
+    margin-bottom: 2rem;
+  }
+
+  #header-container {
+    background: $oppositeGradient;
+    height: vh(10);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    h3 {
+      font-weight: 400;
+      color: white;
+      font-size: 1.5rem;
+      &.bold {
+        font-weight: 700;
+      }
+    }
+  }
+
+  .accessibility-content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+
+    h4 {
+      color: black;
+      font-size: 1.1rem;
+      align-self: flex-start;
+      &.bold {
+        font-weight: 600;
+      }
+    }
+    h5 {
+      color: black;
+      font-size: 1rem;
+      text-align: start;
+    }
+
+    ul {
+      font-size: 0.9rem;
+      text-align: start;
+    }
+  }
+}

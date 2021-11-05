@@ -1,0 +1,14 @@
+{
+    "he": {
+        "name": "עברית",
+        "shortcat": "he",
+        "direction": "rtl",
+        "regex": "[א-ת]"
+    },
+    "ar": {
+        "name": "عربيه",
+        "shortcat": "ar",
+        "direction": "rtl",
+        "regex": "[ء-ي]"
+    }
+}

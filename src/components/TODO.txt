@@ -1,0 +1,6 @@
+selecting a class summary -> sometimes (usually at very very beggining) shows that the class was selected (by having a blue underline) and then refreshes back to monthly summaty page and not the students in the class summary
+
+that may be because it thinks there is no data in class summary page in which case we told it to go back.
+
+*) check dates on excel 
+*) make sure that fetches don't bring information we don't need (like on the FAJRESes)

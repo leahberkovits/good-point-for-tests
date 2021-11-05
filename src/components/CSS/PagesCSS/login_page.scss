@@ -1,0 +1,90 @@
+@import "../consts.scss";
+
+#log-in-container {
+  overflow-y: auto;
+  height: vh(100);
+  width: vw(100);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  //20vh
+  #Welcome-container {
+    height: vh(20);
+  }
+  //30vh
+  #logInForm-container {
+    //setting the container height to 30 turns out very good for all the form elements
+    height: vh(30);
+  }
+  //5vh
+  // #signUp-container { // there's *NO* SIGN UP option ON LOGIN PAGE בקטע עקרוני!
+  // height: vh(5); //needs to be the same as the line height in <p>
+  // width: fit-content;
+  // }
+  //5vh
+  #resetPassword-container {
+    height: vh(5); //needs to be the same as the line height in <p>
+    width: fit-content;
+  }
+  #resetPassword-container-open {
+    height: vh(35); //needs to be the same as the line height in <p>
+    width: fit-content;
+  }
+  #welcomeImg {
+    #image {
+      height: vh(20);
+    }
+  }
+
+  #accessibility {
+    background-color: #4d8b9d;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    #image {
+      height: vh(4);
+    }
+  }
+
+  .login-page-space {
+    width: vw(100);
+  }
+  #login-page-space-0 {
+    height: vh(5);
+  }
+  #login-page-space-1 {
+    height: vh(7);
+  }
+  #login-page-space-2 {
+    height: vh(3);
+  }
+  #login-page-space-3 {
+    height: vh(2.5);
+  }
+  #login-page-space-4 {
+    height: vh(2.5);
+  }
+}
+
+//height sum:
+/* 
+spaces:
+  5
+  5
+  5
+  5
+reset:
+  5
+signup: 
+  5
+welcome:
+  20
+login:
+  30
+margin for inputs in form:
+  12 (4*3) 
+*/

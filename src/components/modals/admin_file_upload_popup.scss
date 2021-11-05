@@ -1,0 +1,27 @@
+@import "../CSS/admin_consts.scss";
+.admin-file-upload-popup {
+    padding: 35px 60px;
+    width: 40vw;
+    // height: 250px;
+    justify-content: space-between;
+    .admin-file-upload-title {
+        color: $admin-medium-grey;
+        font-weight: bold;
+        font-size: 1.1rem;
+    }
+    .admin-file-upload-fileName-icon-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        margin: 2rem 0;
+        .admin-file-upload-fileName {
+            color: $admin-darker-grey;
+        }
+        .admin-file-upload-icon {
+            margin-left: 1rem;
+            color: $admin-medium-grey;
+        }
+    }
+}

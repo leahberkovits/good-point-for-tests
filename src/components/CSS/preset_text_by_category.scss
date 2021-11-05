@@ -1,0 +1,9 @@
+@import './consts.scss';
+#radio_container {
+    margin: 0;
+  }
+#list_sentences{
+  overflow : scroll;
+  height: 95%;
+  font-size: $medium;
+}

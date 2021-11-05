@@ -1,0 +1,67 @@
+@import "./admin_consts.scss";
+
+#home-teacher-popup-container {
+  width: 70vw;
+  max-height: 90vh;
+  height: fit-content;
+  min-height: 35vh;
+  padding: 1rem;
+  #teachersSelectes-container {
+    overflow-y: auto;
+    width: 60%;
+    height: fit-content;
+  }
+  #teachersSelectes-container::-webkit-scrollbar-track {
+    // didnt work
+    background-color: red;
+  }
+  #teachersSelectes-container::-webkit-scrollbar-button {
+    // didnt work
+    background-color: red;
+  }
+  #home-teacher-submit {
+    // position: absolute;
+    width: fit-content;
+    align-self: flex-end;
+    margin-left: 2rem;
+    margin-bottom: 1.7rem;
+    // left: 50%;
+    // transform: translateX(-50%);
+    // bottom: 0;
+    // margin: 0.7rem 0;
+  }
+  #home-teacher-name-select {
+    width: 20vw;
+  }
+  .home-teacher-title {
+    display: inline;
+  }
+}
+html .admin-new-class-form-container,
+#teachersSelectes-container {
+  .home-teacher-info-select {
+    // margin: 0.5rem;
+    // border-color: transparent !important; //mui override
+    // border-radius: 15px !important;
+    &:hover {
+      border-color: transparent !important; //mui override
+      border-radius: 15px !important;
+      select {
+        transition: background-color 0.4s;
+        background-color: #e5e6ea;
+      }
+    }
+    &::after {
+      border-color: transparent !important; //mui override
+      border-radius: 15px !important;
+    }
+    &::before {
+      border-color: transparent !important; //mui override
+      border-radius: 15px !important;
+    }
+    // &:focus {
+    //   border-color: transparent !important; //mui override
+    //   border-radius: 15px !important;
+    // }
+  }
+}

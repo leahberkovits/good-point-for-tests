@@ -1,0 +1,29 @@
+@import "./consts.scss";
+
+#sum {
+  position: relative;
+  top: vh(15);
+  left: 0;
+  right: 0;
+  height: 85vh;
+
+  #topbar {
+    margin-bottom: vh(2);
+  }
+
+  .type-sum {
+    min-width: 2vw(1);
+    border: none;
+    outline: none;
+    background: transparent;
+    text-align: center;
+    font-size: 20px;
+    outline: none;
+  }
+
+  .buttonLine {
+    margin: 0 auto;
+    height: 1px;
+    background-color: $pinkColor;
+  }
+}

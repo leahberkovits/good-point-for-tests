@@ -1,0 +1,49 @@
+@import "./consts.scss";
+
+//* on classes sum AND on students sum popup *//
+#excelMonthSelection-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.2rem;
+  margin-bottom: 1rem;
+  #text-till {
+    width: 18vw;
+  }
+  .monthSelectionButton {
+    cursor: pointer;
+    width: vw(30);
+    height: 30px;
+    border: 1px solid $pinkColor;
+    border-radius: 30px;
+  }
+}
+
+#month-dropdown-container {
+  .MuiListItem-root {
+    text-align: right;
+    padding-right: vw(1);
+  }
+  .MuiTypography-body1 {
+    font-family: "Open Sans Hebrew", sans-serif;
+  }
+
+  .MuiList-root {
+    padding-right: vw(3);
+    padding-left: vw(3);
+  }
+}
+
+//* on classes sum component
+#classesSumContainer {
+  // overflow-y: auto;
+  position: relative;
+  #excelMonthSelection-container {
+    position: relative;
+    left: 0;
+    right: 0;
+    z-index: 6; //changed from 200
+    background-color: white;
+  }
+}

@@ -1,0 +1,33 @@
+@import "./consts.scss";
+
+#welcome-second-container {
+  height: 100%; //30vh
+  #welcome-words {
+    font-size: $headers;
+    // padding-top: 5vh;
+    line-height: vh(5);
+    height: vh(5);
+
+    &.pink {
+      background-image: linear-gradient(#f5a03c, #d4145a);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-background-clip: text;
+      -moz-text-fill-color: transparent;
+    }
+  }
+
+  #welcomeLogo {
+    // padding: 3vh 0;
+    height: vh(15);
+  }
+
+  .color-g,
+  .gp {
+    background-image: linear-gradient(white, #f5a03c, #d4145a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+  }
+}

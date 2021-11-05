@@ -1,0 +1,49 @@
+@import "./consts.scss";
+
+$line_bottom: 13vh;
+$circle_width_and_height: 8vh;
+$circle_radius: #{$circle_width_and_height / 2};
+$border_radius: 2/9 * $circle_width_and_height;
+
+$circle_bottom: calc(#{$line_bottom} - #{$circle_radius});
+$text_margin: calc(#{$circle_radius} + 3px);
+$circle_margin: calc(vw(50) - #{$circle_radius});
+
+#sendGp-container {
+  position: fixed;
+  align-items: center;
+  flex-direction: row-reverse;
+  left: vw(5);
+  bottom: vw(5);
+  color: black;
+
+  #sendGpBtn {
+    font-size: 9.5vh;
+    height: $circle_width_and_height;
+    width: $circle_width_and_height;
+    line-height: $circle_width_and_height;
+    background-color: $pinkColor;
+    color: white;
+    border-radius: $circle_radius;
+  }
+  #sendGp-img {
+    height: $circle_width_and_height;
+  }
+  #bubble-container {
+    margin: 0 vw(2);
+    position: relative;
+    text-align: center;
+  }
+  #bubble-box {
+    width: vw(40);
+  }
+  #text {
+    margin-left: vw(1);
+    width: vw(35);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: $medium;
+  }
+}

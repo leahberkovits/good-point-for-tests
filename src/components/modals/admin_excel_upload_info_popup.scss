@@ -1,0 +1,72 @@
+@import "../CSS/admin_consts.scss";
+
+#admin-excel-upload-info-popup-container {
+    cursor: text;
+    padding: 20px;
+    width: 50vw;
+    min-width: 400px; //?
+    // max-width: 554vw; //?
+    max-height: 70vh; //?
+    overflow: auto;
+    text-align: right;
+    div, span, button  {// if * --> will override the scrollbar
+        color: $admin-darker-grey;
+        user-select: text;
+        -webkit-user-select: text;
+    }
+    #x {
+        cursor: pointer;
+        fill: $admin-medium-grey;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+
+        font-size: 1.5rem;
+    }
+    #admin-excel-upload-info-popup-title {
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+    }
+    .admin-excel-upload-info-popup-text {
+    }
+    #admin-excel-upload-info-popup-text1 {
+        font-size: 0.95rem;
+    }
+    #admin-excel-upload-info-popup-text2 {
+        margin-bottom: 1rem;
+        // margin-bottom: 1rem;
+    }
+    #admin-excel-upload-info-popup-mini-title {
+        font-size: 1.1rem;
+        &::after{
+            content: ":";
+        }
+    }
+
+    #admin-excel-upload-info-popup-bullet-g1-container {
+        margin-bottom: 1rem;
+        .admin-excel-upload-info-popup-bullet-g1 {
+
+            &::before {
+                content: "✓ ";
+            }
+        }
+    }
+    #admin-excel-upload-info-popup-headersInfo {
+        margin-bottom: 1rem;
+        font-weight: bold;
+        span {
+            &::after {
+                content: ": ";
+            }
+        }
+    }
+
+    #admin-excel-upload-info-popup-bullet-g2-container {
+        .admin-excel-upload-info-popup-bullet-g2 {
+            &::before {
+                content: "✓ ";
+            }
+        }
+    }
+}

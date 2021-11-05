@@ -1,0 +1,16 @@
+@import "../consts.scss";
+
+//top component only on class monthly summary page to end
+
+#classGpSum-sentence {
+  font-size:$big;
+  position: absolute;
+  top: 8vh;
+  height: 6vh;
+  line-height: 6vh;
+  right: 0;
+  left: 0;
+  background: $pinkOrangeGradient;
+  color: white;
+  margin: 0;
+}

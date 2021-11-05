@@ -1,0 +1,59 @@
+#pm-edit-container {
+  max-height: 90vh;
+  height: fit-content;
+  position: fixed;
+  background: white;
+  border-radius: 30px;
+  z-index: 12;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6vh 2vw;
+  #superadmin-table-container {
+    overflow-y: scroll;
+    height: 85vh;
+  }
+
+  #superadmin-table {
+    width: 85vw;
+
+    th {
+      width: 10vw;
+      background-color: lightgrey;
+    }
+    > :first-child {
+      //first tr -- the headers
+      height: 8vh;
+
+      th:nth-last-child(-n + 1) {
+        //last two tr s
+        width: 15%;
+      }
+    }
+    tr {
+      height: 10vh;
+    }
+    table,
+    th,
+    td {
+      color: grey;
+    }
+    #superadmin-delete-icon {
+    }
+    #superadmin-delete-icon:hover {
+      color: lightgrey;
+    }
+  }
+
+  #sa-pm-edit-buttons-container {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

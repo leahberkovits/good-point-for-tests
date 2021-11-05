@@ -1,0 +1,41 @@
+$admin-light-grey: #f0f0f7;
+$admin-grey: #a5a4bf;
+$admin-medium-grey: #a3a4c1;
+$admin-darker-grey: #666666;
+$admin-orange: #ef8152;
+$orangeColor: #ef8142; //changed to a little darker orages, the same as the gradient on summary page, so the export excel button will look the same
+$admin-error-border: red;
+
+@mixin input-focus-style {
+    border-color: #80bdff;
+    box-shadow: 0 0 2px 1px rgba(0, 123, 255, 0.25); //0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+@mixin orageVerticalScrollbar {
+    &::-webkit-scrollbar {
+        display: unset;
+        width: 0.4rem;
+        height: 100%;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: #{$admin-orange + "c0"}; // adds opacity
+        border-radius: 7px;
+        &:hover {
+            background: #{$admin-orange + "a0"}; // adds opacity
+        }
+    }
+}
+@mixin greySimpleHorizontalScrollbar {
+    &::-webkit-scrollbar {
+        display: unset;
+        height: 0.25rem;
+        width: 100%;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: #{$admin-medium-grey + "58"}; // adds opacity
+        border-radius: 7px;
+        &:hover {
+            background: #{$admin-medium-grey + "a0"}; // adds opacity
+        }
+    }
+}
